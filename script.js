@@ -20,6 +20,13 @@ function calcularPromedio() {
     let num1 = parseFloat(document.getElementById("num1").value);
     let num2 = parseFloat(document.getElementById("num2").value);
     let num3 = parseFloat(document.getElementById("num3").value);
+
+    if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+        document.getElementById("output").innerText =
+            "Por favor ingresa tres números válidos.";
+        return;
+    }
+
     let promedio = (num1 + num2 + num3) / 3; // Fórmula del promedio
     document.getElementById("output").innerText = `El promedio es: ${promedio}`;
 }
